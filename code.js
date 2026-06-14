@@ -68,3 +68,60 @@ function validateinput()
     return false;
 }
 document.getElementById("myForm").onsubmit = validateinput;
+
+// timer variable for moving meme
+var memeTimer;
+
+// starts the meme movement
+function startMeme()
+{
+    // disables the start button
+    document.getElementById("startButton").disabled = true;
+
+    // enables the stop button
+    document.getElementById("stopButton").disabled = false;
+
+    // shows message
+    document.getElementById("memeMessage").innerHTML = "The meme is moving.";
+
+    // starts moving meme
+    memeTimer = setInterval(moveMeme, 500);
+}
+
+// stops the meme movement
+function stopMeme()
+{
+    // enables the start button
+    document.getElementById("startButton").disabled = false;
+
+    // disables the stop button
+    document.getElementById("stopButton").disabled = true;
+
+    // shows message
+    document.getElementById("memeMessage").innerHTML = "The meme has stopped.";
+
+    // stops moving meme
+    clearInterval(memeTimer);
+}
+
+// moves the meme image
+function moveMeme()
+{
+    // gets the meme image
+    var meme = document.getElementById("memeimage");
+
+    // creates random left position
+    var leftPosition = Math.floor(Math.random() * 600);
+
+    // creates random top position
+    var topPosition = Math.floor(Math.random() * 400);
+
+    // allows the meme to move
+    meme.style.position = "absolute";
+
+    // moves meme left and right
+    meme.style.left = leftPosition + "px";
+
+    // moves meme up and down
+    meme.style.top = topPosition + "px";
+}
