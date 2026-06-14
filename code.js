@@ -30,17 +30,41 @@ document.getElementById("warwinner").innerHTML =
 
 function validateinput()
 {
-  console.log("Testing form submission...");
-  return false;
-    
-}
+    // Gets first name from form
+    var firstName = document.getElementById("fname").value;
 
-window.addEventListener("DOMContentLoaded", (event) => {
-    const form = document.getElementById("myform");
-    if (form) {
-        form.addEventListener("submit", validateinput);
-        
+    // Gets last name from form
+    var lastName = document.getElementById("lname").value;
+
+    // Gets zip code from form
+    var zipCode = document.getElementById("zipcode").value;
+
+    // Combines first and last name
+    var fullName = firstName + " " + lastName;
+
+    // Checks if full name is longer than 20 characters
+    if (fullName.length > 20)
+    {
+        document.getElementById("validationmessage").innerHTML =
+        "Warning: Full name cannot be more than 20 characters.";
+
+        return false;
     }
 
-});
+    // Checks if zip code is exactly 5 digits
+    if (!/^[0-9]{5}$/.test(zipCode))
+    {
+        document.getElementById("validationmessage").innerHTML =
+        "Warning: Zip code must contain exactly 5 digits.";
 
+        return false;
+    }
+
+    // Displays secret message if valid
+    document.getElementById("validationmessage").innerHTML =
+    "Welcome " + fullName +
+    "! Secret Message: Never stop learning and building.";
+
+    return false;
+}
+document.getElementById("myForm").onsubmit = validateinput;
