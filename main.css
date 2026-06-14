@@ -33,3 +33,20 @@ footer{
 h1{
     text-align: center;
 }
+/* styles the palindrome section */
+#palindromeForm
+{
+    background-color: white;
+    color: black;
+    padding: 15px;
+    margin: 20px auto;
+    width: 350px;
+    border-radius: 10px;
+}
+
+/* styles palindrome message */
+#palindromeMessage
+{
+    color: rgb(204, 204, 219);
+    font-family: Arial;
+}

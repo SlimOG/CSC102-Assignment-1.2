@@ -125,3 +125,64 @@ function moveMeme()
     // moves meme up and down
     meme.style.top = topPosition + "px";
 }
+// function checks if user input is a palindrome
+function checkPalindrome()
+{
+    // gets the user input
+    var userText = document.getElementById("palindromeInput").value;
+
+    // gets the message area
+    var message = document.getElementById("palindromeMessage");
+
+    // gets the history area
+    var history = document.getElementById("palindromeHistory");
+
+    // checks if the user entered nothing
+    if (userText == "")
+    {
+        // shows validation message
+        message.innerHTML = "Please enter a word or phrase.";
+
+        // stops the form from refreshing
+        return false;
+    }
+
+    // removes spaces and makes text lowercase
+    var cleanText = userText.replaceAll(" ", "").toLowerCase();
+
+    // creates an empty reverse word
+    var reverseText = "";
+
+    // loop goes backward through the clean text
+    for (var i = cleanText.length - 1; i >= 0; i--)
+    {
+        // adds each letter to reverse text
+        reverseText = reverseText + cleanText[i];
+    }
+
+    // checks if clean text equals reverse text
+    if (cleanText == reverseText)
+    {
+        // shows palindrome message
+        message.innerHTML = userText + " is a palindrome.";
+    }
+
+    // runs if text is not a palindrome
+    else
+    {
+        // shows not palindrome message
+        message.innerHTML = userText + " is not a palindrome.";
+    }
+
+    // adds the checked word to the page history
+    history.innerHTML = history.innerHTML + "<p>You checked: " + userText + "</p>";
+
+    // clears the input box so user can enter another word
+    document.getElementById("palindromeInput").value = "";
+
+    // stops the form from refreshing
+    return false;
+}
+
+// connects the palindrome form to the function without addEventListener
+document.getElementById("palindromeForm").onsubmit = checkPalindrome;
