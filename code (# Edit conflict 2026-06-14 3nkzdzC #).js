@@ -1,6 +1,4 @@
 function declarewar()
-
-
 {
     
     var num1 = Math.floor(Math.random() * 13) + 1;
@@ -28,19 +26,5 @@ document.getElementById("warwinner").innerHTML =
 
 }
 
-function validateinput()
-{
-  console.log("Testing form submission...");
-  return false;
-    
-}
-
-window.addEventListener("DOMContentLoaded", (event) => {
-    const form = document.getElementById("myform");
-    if (form) {
-        form.addEventListener("submit", validateinput);
-        
-    }
-
-});
-
+function validateInput()
+// This function changes the text of the heading element to "I DECLARE WAR!" when called./

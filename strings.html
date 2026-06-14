@@ -6,8 +6,23 @@
     <!-- the head tag contains information for the browser and search engine -->
     <head>
         <title>My CSC102 Home Page</title>
+
+         <header>
+        <form id="myForm">
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname"><br><br>
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname"><br><br>
+            <label for="zipcode">Zip Code:</label>
+            <input type="text" id="zipcode" name="zipcode"><br><br>
+            <input type="submit" value="Submit" onclick="validateinput()">
+            </form>          
+            <footer>
+
+             </header>
         <!-- link to our css file -->
          <link rel="stylesheet" href="main.css">
+         <script src="code.js"></script>
     </head>
     
     <!-- the body tag contains the content of the page -->
@@ -15,6 +30,7 @@
         <!-- this is a heading -->
         <h1>Welcome to my CSC102 Home Page</h1>
         <!-- create a nav section to hold the menu -->
+        
         
          <nav>
             <a href="index.html">Home</a>
@@ -25,10 +41,24 @@
             <br>
             <a href="strings.html">Strings</a>
          </nav>
-        <p>
+
+         <header>
+        <form>
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname"><br><br>
+            
+            <footer>
+
+             </header>
+
+         <p>
             <!-- img is the image tag -->
             <img id="memeimage" src="meme.JPG">
          </p>
+         
+
+
+        
     </body>
 </html>
 
