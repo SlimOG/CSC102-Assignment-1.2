@@ -103,3 +103,72 @@ h1{
     color: rgb(204, 204, 219);
     font-family: Arial;
 }
+/* centers the game content on the page */
+body
+{
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* styles the main page heading */
+#heading
+{
+    color: gold;
+    text-shadow: 2px 2px 4px black;
+}
+
+/* styles the navigation links */
+nav a
+{
+    color: white;
+    background-color: #2d1e8f;
+    padding: 8px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+/* changes navigation links when the mouse moves over them */
+nav a:hover
+{
+    background-color: gold;
+    color: black;
+}
+
+/* styles the war game title */
+h2
+{
+    color: gold;
+    font-size: 32px;
+}
+
+/* styles the declare war button */
+button
+{
+    background-color: crimson;
+    color: white;
+    font-size: 24px;
+    padding: 15px 30px;
+    border: 3px solid gold;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+/* changes the button when the mouse moves over it */
+button:hover
+{
+    background-color: darkred;
+    transform: scale(1.05);
+}
+
+/* styles the winner result message */
+#warwinner
+{
+    color: yellow;
+    font-size: 28px;
+    background-color: black;
+    padding: 15px;
+    margin: 25px auto;
+    width: 60%;
+    border-radius: 12px;
+    border: 2px solid gold;
+}
