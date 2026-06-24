@@ -1,35 +1,40 @@
+<!-- Horace Smith, CSC102 Sound Assignment -->
+
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>I DECLARE WAR! CARD GAME</title>
-        <script src="code.js"></script>
-        <link href="main.css" rel="stylesheet">
+<head>
+    <!-- this is the title shown on the browser tab -->
+    <title>I DECLARE WAR! CARD GAME</title>
+
+    <!-- this links the JavaScript file -->
+    <script src="code.js"></script>
+
+    <!-- this links the CSS file -->
+    <link href="main.css" rel="stylesheet">
 </head>
+
 <body>
+    <!-- this is the top page header -->
     <header>
+        <!-- this is the main heading -->
         <h1 id="heading">Welcome to my CSC102 Home Page</h1>
-    <h2>
-     
+
+        <!-- this is the navigation menu -->
         <nav>
-            <a href="index.html">Home</a>
-            <br>
-            <a href="boards.html">Boards</a>
-            <br>
-            <a href="game.html">Game</a>
-            <br>
+            <a href="index.html">Home</a><br>
+            <a href="boards.html">Boards</a><br>
+            <a href="game.html">Game</a><br>
             <a href="strings.html">Strings</a>
         </nav>
-    </h2>
     </header>
-        <h2>I DECLARE WAR! CARD GAME</h2>
-        <!-- this function give you the ability to declare war with the button click -->
-        <button onclick="declarewar()";>declare war!</button>
-        <h3 id="warwinner">Winner results!</h3>
-            <!-- displays the winner of the war once the declare war button is executed -->
 
-        
-        
-        
-    </header>
-<body>
+    <!-- this is the card game title -->
+    <h2>I DECLARE WAR! CARD GAME</h2>
+
+    <!-- this button calls the declarewar function from code.js -->
+    <button onclick="declarewar()">Declare War!</button>
+
+    <!-- this displays the winner result -->
+    <h3 id="warwinner">Winner results!</h3>
+</body>
 </html>

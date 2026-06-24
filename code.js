@@ -1,7 +1,8 @@
 function declarewar()
-
-
 {
+    
+    var warSound = new Audio("war.mp3");
+    warSound.play();
     
     var num1 = Math.floor(Math.random() * 13) + 1;
 
