@@ -3,7 +3,7 @@ function declarewar()
     
     var warSound = new Audio("war.mp3");
     warSound.play();
-    
+
     var num1 = Math.floor(Math.random() * 13) + 1;
 
     var num2 = Math.floor(Math.random() * 13) + 1;
@@ -187,3 +187,94 @@ function checkPalindrome()
 
 // connects the palindrome form to the function without addEventListener
 document.getElementById("palindromeForm").onsubmit = checkPalindrome;
+
+// this function checks the student skill level
+function checkSkillLevel()
+{
+    // gets the student name from the form
+    var studentName = document.getElementById("studentName").value;
+
+    // gets the concept count from the form
+    var conceptCount = document.getElementById("conceptCount").value;
+
+    // gets the message area from the page
+    var skillsMessage = document.getElementById("skillsMessage");
+
+    // gets the concept list area from the page
+    var conceptList = document.getElementById("conceptList");
+
+    // trims extra spaces from the student name
+    studentName = studentName.trim();
+
+    // changes the student name to uppercase
+    var upperName = studentName.toUpperCase();
+
+    // creates an object to store student information
+    var student = {
+        name: upperName,
+        concepts: Number(conceptCount)
+    };
+
+    // checks if the name field is empty
+    if (student.name == "")
+    {
+        // displays validation message using innerHTML
+        skillsMessage.innerHTML = "Please enter your name.";
+
+        // stops the form from refreshing
+        return false;
+    }
+
+    // checks if the number is invalid
+    if (isNaN(student.concepts) || student.concepts < 0 || student.concepts > 6)
+    {
+        // displays validation message using innerHTML
+        skillsMessage.innerHTML = "Please enter a number from 0 to 6.";
+
+        // stops the form from refreshing
+        return false;
+    }
+
+    // checks if the student understands many concepts
+    if (student.concepts >= 5)
+    {
+        // displays advanced message using innerHTML
+        skillsMessage.innerHTML = student.name + ", you are showing strong programming understanding.";
+    }
+
+    // checks if the student understands some concepts
+    else if (student.concepts >= 3)
+    {
+        // displays intermediate message using innerHTML
+        skillsMessage.innerHTML = student.name + ", you are building a solid foundation.";
+    }
+
+    // runs if the student understands fewer concepts
+    else
+    {
+        // displays beginner message using innerHTML
+        skillsMessage.innerHTML = student.name + ", keep practicing the basics.";
+    }
+
+    // creates an array of programming concepts
+    var concepts = ["Decision Logic", "Loops", "String Manipulation", "Validation", "Functions", "Objects"];
+
+    // starts the concept list output
+    var output = "<h4>Programming Concepts Used:</h4>";
+
+    // loops through the programming concepts
+    for (var i = 0; i < concepts.length; i++)
+    {
+        // adds each concept to the output
+        output = output + "<p>" + concepts[i] + "</p>";
+    }
+
+    // displays the concept list using innerHTML
+    conceptList.innerHTML = output;
+
+    // stops the form from refreshing
+    return false;
+}
+
+// connects the skills form to the function without addEventListener
+document.getElementById("skillsForm").onsubmit = checkSkillLevel;

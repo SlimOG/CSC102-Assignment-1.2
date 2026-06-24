@@ -14,6 +14,45 @@
     <script src="code.js" defer></script>
 </head>
 
+<!-- this section is for the new programming concepts assignment -->
+<section id="skillsBox">
+    <!-- this heading tells the user what the new feature does -->
+    <h2>Student Skill Level Checker</h2>
+
+    <!-- this paragraph explains the user input -->
+    <p>Enter your name and the number of programming concepts you understand.</p>
+
+    <!-- this form collects user input using submit -->
+    <form id="skillsForm">
+        <!-- this label identifies the student name input -->
+        <label for="studentName">Student Name:</label>
+
+        <!-- this input allows the user to type a name -->
+        <input type="text" id="studentName">
+
+        <!-- this line break separates the inputs -->
+        <br><br>
+
+        <!-- this label identifies the concepts input -->
+        <label for="conceptCount">Concepts Understood 0-6:</label>
+
+        <!-- this input allows the user to type a number -->
+        <input type="text" id="conceptCount">
+
+        <!-- this line break separates the button -->
+        <br><br>
+
+        <!-- this button submits the form -->
+        <input type="submit" value="Check Skill Level">
+    </form>
+
+    <!-- this area displays validation and results using innerHTML -->
+    <h3 id="skillsMessage">Your result will appear here.</h3>
+
+    <!-- this area displays the concepts list created by a loop -->
+    <div id="conceptList"></div>
+</section>
+
 <body>
     <!-- Main heading -->
     <h1>Welcome to My Strings Page</h1>

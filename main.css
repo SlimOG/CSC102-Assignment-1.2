@@ -172,3 +172,36 @@ button:hover
     border-radius: 12px;
     border: 2px solid gold;
 }
+/* styles the new programming concepts section */
+#skillsBox
+{
+    background-color: white;
+    color: black;
+    padding: 20px;
+    margin: 30px auto;
+    width: 420px;
+    border-radius: 15px;
+    border: 3px solid gold;
+    text-align: center;
+}
+
+/* styles the skills form inputs */
+#skillsBox input
+{
+    padding: 8px;
+    margin: 5px;
+    border-radius: 6px;
+}
+
+/* styles the skill result message */
+#skillsMessage
+{
+    color: darkblue;
+}
+
+/* styles the concept list */
+#conceptList
+{
+    color: darkred;
+    font-weight: bold;
+}
