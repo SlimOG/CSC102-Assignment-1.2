@@ -205,3 +205,36 @@ button:hover
     color: darkred;
     font-weight: bold;
 }
+/* Table Styles */
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: white;
+}
+table th {
+    background-color: #003366 !important;
+    color: #ffffff !important;
+    border: 1px solid black;
+    padding: 12px;
+    font-weight: bold;
+}
+
+td {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #666666;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+}
+
+tr:nth-child(even) {
+    background-color: #e8f1ff;
+}
+
+tr:hover {
+    background-color: #cce5ff;
+}
+}
