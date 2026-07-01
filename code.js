@@ -277,4 +277,4 @@ function checkSkillLevel()
 }
 
 // connects the skills form to the function without addEventListener
-document.getElementById("skillsForm").onsubmit = checkSkillLevel;
+document.getElementById("warButton").onclick = declarewar;
